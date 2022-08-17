@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useRef, useState } from 'react';
 import './App.css';
+import Buttonshow from './component/Button';
+import Main from './component/main';
+import Textmasseg from './component/Text'
 
 function App() {
+
+  const [showMassege , setshowMassege] = useState(false)
+  // const btnRef = useRef(null)
+
+  const funsetstate = ()=>{
+    setshowMassege(!showMassege)
+  }
+
+
+//   const closeOpenMenus = (e)=>{
+//     if(btnRef.current && showMassege && !btnRef.current.contains(e.target)){
+//       setshowMassege  (false)
+//     }
+// }
+  // document.addEventListener('mousedown',closeOpenMenus)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      App conponent
+      <hr/>
+      <Buttonshow showMassege={showMassege} setshowMassege={setshowMassege} funsetstate={funsetstate} />
+      <hr/>
+      <Main />
+      {showMassege ? <Textmasseg/> : null }
     </div>
   );
 }
