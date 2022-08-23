@@ -2,4 +2,8 @@
     text-align: center;
     width: 50%;
     margin: auto;
+    background-color: antiquewhite;
+}
+.ops{
+    background-color: red;
 }

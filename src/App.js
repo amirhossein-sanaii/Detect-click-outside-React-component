@@ -1,36 +1,45 @@
-import { useRef, useState } from 'react';
+// import { useState } from 'react';
+// import OutsideClickHandler from 'react-outside-click-handler';
+// import './App.css';
+// import Textmasseg from './component/Text'
+
+// function App() {
+
+//   const [Showmenu, setShowmwnu] = useState(false)
+//   return (
+//     <div className='App'>
+//       <h1>Amir</h1>
+//       <hr/>
+//       <OutsideClickHandler onOutsideClick={()=>{
+//         setShowmwnu(false)
+//       }}>
+//         <button onClick={() => { setShowmwnu(!Showmenu) }}>Show / Hide</button>
+//         <hr />
+//         {Showmenu ? <Textmasseg /> : null}
+//       </OutsideClickHandler>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import { useState } from 'react';
 import './App.css';
-import Buttonshow from './component/Button';
-import Main from './component/main';
 import Textmasseg from './component/Text'
 
 function App() {
 
-  const [showMassege , setshowMassege] = useState(false)
-  // const btnRef = useRef(null)
-
-  const funsetstate = ()=>{
-    setshowMassege(!showMassege)
-  }
-
-
-//   const closeOpenMenus = (e)=>{
-//     if(btnRef.current && showMassege && !btnRef.current.contains(e.target)){
-//       setshowMassege  (false)
-//     }
-// }
-  // document.addEventListener('mousedown',closeOpenMenus)
-
+  const [Showmenu, setShowmwnu] = useState(false)
   return (
-    <div className="App" >
-      App conponent
-      <hr/>
-      <Buttonshow showMassege={showMassege} setshowMassege={setshowMassege} funsetstate={funsetstate} />
-      <hr/>
-      <Main />
-      {showMassege ? <Textmasseg/> : null }
+    <div className='App'>
+      <h1>Amir</h1>
+        <button onClick={() => { setShowmwnu(!Showmenu) }}>Show / Hide</button>
+        <hr />
+        {Showmenu ? <Textmasseg /> : null}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

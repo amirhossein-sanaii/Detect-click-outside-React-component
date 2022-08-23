@@ -2,7 +2,7 @@ import React from 'react'
 
 const Textmasseg = () => {
   return (
-    <span id='masage'>Textmasseg</span>
+    <span>Textmasseg</span>
   )
 }
 
